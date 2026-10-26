@@ -1,0 +1,126 @@
+
+/* ===== RESET DASAR ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== TAMPILAN BODY ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+    color: #f8fafc;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* ===== JUDUL UTAMA ===== */
+h1 {
+    font-size: 42px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: muncul 1s ease;
+}
+
+/* ===== FOTO PROFIL ===== */
+img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #60a5fa;
+    box-shadow: 0 0 25px rgba(96, 165, 250, 0.6);
+    margin-bottom: 25px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px rgba(147, 197, 253, 0.9);
+}
+
+/* ===== KARTU DATA DIRI ===== */
+h2 {
+    font-size: 24px;
+    color: #93c5fd;
+    margin: 20px auto 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #60a5fa;
+    width: fit-content;
+}
+
+/* ===== PARAGRAF ===== */
+p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 10px auto;
+    max-width: 500px;
+    color: #e2e8f0;
+}
+
+/* ===== DATA DIRI ===== */
+p b {
+    color: #93c5fd;
+    margin-right: 5px;
+}
+
+/* ===== EFEK KARTU TRANSPARAN ===== */
+body > h2,
+body > p {
+    position: relative;
+}
+
+body > p {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 12px 18px;
+    backdrop-filter: blur(10px);
+    transition: background 0.3s, transform 0.3s;
+}
+
+body > p:hover {
+    background: rgba(255, 255, 255, 0.16);
+    transform: translateY(-3px);
+}
+
+/* ===== ANIMASI ===== */
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE HP ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+    }
+}
